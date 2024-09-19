@@ -1,9 +1,6 @@
 //import React from 'react'
 import { FiBookOpen, FiGlobe, FiFileText } from "react-icons/fi";
 const Home = () => {
-  
-
-
   return (
     <section id="home" className="py-24 md:py-32 lg:mb-20 2xl:pt-36">
       {/* Primera parte */}
