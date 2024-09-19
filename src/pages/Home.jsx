@@ -1,4 +1,4 @@
-import React from 'react'
+//import React from 'react'
 import { FiBookOpen, FiGlobe, FiFileText } from "react-icons/fi";
 const Home = () => {
   
