@@ -12,7 +12,6 @@ import { SiHtmlacademy } from "react-icons/si";
 const Services = () => {
   return (
     <div className="block justify-center items-center min-h-screen">
-        <div className="p-16"/>
         <div className='flex justify-between max-w-full mx-10'>
             <h1 className="pl-32 pb-8 text-black align-left max-w-full mx-auto">
                 Nuestros Servicios
@@ -30,7 +29,6 @@ const Services = () => {
         <Cards icon={IoMdPeople} tittle="Comunidad Activa" text="Únete a una red de estudiantes y profesionales para compartir experiencias." color="purple" />
         <Cards icon={SiHtmlacademy} tittle="Certificación Reconocida" text="Obtén un certificado que avale tus nuevos conocimientos." color="rose" />
       </div>
-      <div className="p-16"/>
     </div>   
   );
 };
