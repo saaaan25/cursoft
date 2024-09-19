@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 
 import hombreImg from '../assets/hombre.png';  // Ajusta la ruta según tu estructura de carpetas
 import mujerImg from '../assets/mujer.png';
@@ -14,7 +14,7 @@ const AboutUs = () => {
     </h2>
     </div>
 
-    <div className="relative mx-6 max-w-screen-xl xl:mx-auto lg:mx-24 grid gap-10 grid-cols-1 md:grid-cols-2 mb-14 lg:mb-24 gap-8">
+    <div className="relative mx-6 max-w-screen-xl xl:mx-auto lg:mx-24 grid gap-10 grid-cols-1 md:grid-cols-2 mb-14 lg:mb-24">
     {/* Profile 1 */}
     <div className="bg-white rounded-lg shadow-lg p-6 text-center">
         <div className="mb-4">
@@ -147,6 +147,6 @@ const AboutUs = () => {
 
 </section>
 );
-};
+}
 
 export default AboutUs;
