@@ -1,18 +1,24 @@
 // import React from 'react';
-import { Link } from 'react-router-dom'; // O 'next/link' si estás usando Next.js
+import { HiCode } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <nav className="bg-blue-600 p-4 shadow-md">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white font-bold text-xl">
-          MyApp
+    <nav className="bg-white p-4 font-semibold mflex justify-center">
+      <div className="container mx-auto flex justify-between items-center text-pretty">
+        <div className="flex space-x-2 font-bold text-xl items-center mr-14">
+          <div>
+            <HiCode></HiCode>
+          </div>
+          <div className='pb-1'>
+            Softcode
+          </div>
         </div>
-        <ul className="flex space-x-4">
+        <ul className="flex space-x-6 font-semibold">
           <li>
             <Link
               to="/"
-              className="text-white hover:text-gray-200 transition-colors"
+              className="hover:text-blue-800 transition-colors"
             >
               Home
             </Link>
@@ -20,7 +26,7 @@ const Header = () => {
           <li>
             <Link
               to="/aboutus"
-              className="text-white hover:text-gray-200 transition-colors"
+              className="hover:text-blue-800 transition-colors"
             >
               Sobre nosotros
             </Link>
@@ -28,7 +34,7 @@ const Header = () => {
           <li>
             <Link
               to="/courses"
-              className="text-white hover:text-gray-200 transition-colors"
+              className="hover:text-blue-800 transition-colors"
             >
               Cursos
             </Link>
@@ -36,12 +42,20 @@ const Header = () => {
           <li>
             <Link
               to="/services"
-              className="text-white hover:text-gray-200 transition-colors"
+              className="hover:text-blue-800 transition-colors"
             >
               Servicios
             </Link>
           </li>
         </ul>
+        <div className='flex space-x-6 font-semibold'>
+            <button className='text-yellow-300 hover:text-black'>
+                Iniciar Sesión
+            </button>
+            <button className='text-blue-800 border border-blue-800 p-2 rounded-md hover:text-black hover:border-black'>
+                Registrarse
+            </button>
+        </div>
       </div>
     </nav>
   );
