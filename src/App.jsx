@@ -11,7 +11,7 @@ import Services from './pages/Services';
 const App = () => {
   return (
     <Router>
-      <div className='flex flex-col justify-center'>
+      <div>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
