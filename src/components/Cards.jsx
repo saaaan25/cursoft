@@ -33,7 +33,7 @@ const colorClasses = {
   },
 };
 
-export const Cards = ({ icon: Icon, tittle, text, color = "blue" }) => {
+export const Cards = ({ icon: Icon, title, text, color = "blue" }) => {
   const colors = colorClasses[color] || colorClasses["blue"];
 
   return (
@@ -41,7 +41,7 @@ export const Cards = ({ icon: Icon, tittle, text, color = "blue" }) => {
       <div className={`p-3 rounded-lg inline-block w-auto h-auto ${colors.iconBg}`}>
         {Icon && <Icon className={`text-3xl ${colors.iconColor}`} />}
       </div>
-      <h1 className="text-2xl text-black font-bold mb-2">{tittle}</h1>
+      <h1 className="text-2xl text-black font-bold mb-2">{title}</h1>
       <p className="text-justify text-black break-words max-w-full">{text}</p>
     </div>
   );
