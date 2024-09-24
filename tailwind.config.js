@@ -5,7 +5,11 @@ module.exports = {
     "./index.html",
   ],
   theme: {
-    extend: {},
+    extend: {
+      maxWidth: {
+        '2/3': '66.666667%',
+      },
+    },
     container:{
       center:true,
     }

@@ -1,9 +1,23 @@
+//import para desplazamiento desde TyC
+import React, { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
+
 //import React from 'react';
 
 import hombreImg from '../assets/hombre.png';  // Ajusta la ruta según tu estructura de carpetas
 import mujerImg from '../assets/mujer.png';
 
 const AboutUs = () => {
+
+    //Hola franzito que haces?
+    const contactRef = useRef(null);
+    const { hash } = useLocation();
+
+    useEffect(() => {
+        if (hash === '#contact') {
+        contactRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [hash]);
 
     return (
     <section id="home" className="py-24 md:py-32 lg:mb-20 2xl:pt-36">
@@ -118,7 +132,7 @@ const AboutUs = () => {
     </div>
 
     {/* Contact Us Section */}
-    <div className="bg-gradient-to-r from-purple-500 to-purple-700 text-white py-12">
+    <div ref={contactRef} id="contact" className="bg-gradient-to-r from-purple-500 to-purple-700 text-white py-12">
     <div className="max-w-screen-lg mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">Contáctanos</h2>
         <p className="text-xl mb-6">¿Tienes alguna pregunta o necesitas más información? ¡Estamos aquí para ayudarte!</p>
