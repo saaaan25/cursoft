@@ -1,5 +1,6 @@
 //import React from 'react'
 import { FiBookOpen, FiGlobe, FiFileText } from "react-icons/fi";
+import Services from "../components/Services";
 import Imagen from "../assets/Hero-image.svg"
 import Imagen2 from "../assets/Hero-image2.svg"
 const Home = () => {
@@ -27,7 +28,7 @@ const Home = () => {
         </div>
       </div>
       {/* Segunda parte */}
-      <div className="relative mx-6 max-w-screen-lg xl:mx-auto grid gap-20 grid-cols-1 md:grid-cols-2">
+      <div className="relative mx-6 max-w-screen-lg xl:mx-auto grid gap-20 grid-cols-1 md:grid-cols-2 mb-14 lg:mb-32">
         <div className="">
           <h1 className="max-w-[500px] text-3xl md:text-4xl font-bold mb-5 md:mb-10 text-[#1C163A]">Accede a los cursos con la mejor calidad
           </h1>
@@ -70,6 +71,7 @@ const Home = () => {
 
         </div>
       </div>
+      <Services />
     </section>
   )
 }
