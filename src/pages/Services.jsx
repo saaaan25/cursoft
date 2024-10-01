@@ -44,8 +44,8 @@ const Services = () => {
                   Elige tu plan
               </h1>
           </div>
-          <div>
-              <p className="text-md text-gray-500 text-center mb-8 max-w-lg mx-auto">
+          <div className='flex justify-center'>
+              <p className="text-md text-gray-500 text-center mb-8 ml-32 mr-32">
                   Descubre tu próximo juego favorito. Ya sea que juegues en consola, PC o en todos los dispositivos, hay un plan para ti. Cancela en cualquier momento para impedir futuros cargos.
               </p>
           </div>
@@ -61,12 +61,12 @@ const Services = () => {
 {/* Zona de cursos */}
         <div>
           <div className='max-w-full mx-10 mt-10'>
-              <h1 className="text-3xl font-bold text-gray-800 pb-5">
+              <h1 className=" flex justify-center text-3xl font-bold text-gray-800 pb-5">
                   ¿No deseas suscribirte?
               </h1>
           </div>
           <div>
-              <p className="text-md text-gray-500 mb-8 ml-32 mr-48">
+              <p className="text-md text-gray-500 mb-8 ml-32 mr-32">
                 No hay problema, aún puedes acceder a nuestros cursos de forma individual. Compra los cursos que más te interesen y aprende a tu propio ritmo. Si en el futuro decides suscribirte, disfrutarás de acceso ilimitado a todos nuestros cursos y materiales. Consulta los <Link to="/terms-and-conditions" className="font-bold text-purple-950 underline " target="_blank" rel="noopener noreferrer">términos y condiciones</Link>.
               </p>
               <div className="flex flex-col items-start gap-2 ml-48 mr-48">

@@ -24,7 +24,7 @@ const Services = () => {
             </h1>
         </div>
         <div>
-            <h1 className="text-md text-gray-500 text-center mb-8 max-w-lg mx-auto">
+            <h1 className="text-md text-gray-500 text-center mb-8 mx-auto">
               Ofrecemos cursos de programación accesibles y prácticos, diseñados para impulsar tu carrera en el mundo digital. ¡Aprende y crece con nosotros!
             </h1>
         </div>

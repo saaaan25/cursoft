@@ -1,38 +1,8 @@
 import CourseCard from "../components/Coursecard";
+import {courses} from "../data/courses";
 
 const CoursesPage = () => {
-    const courses = [
-        {
-            curso: "Python desde cero",
-            imagen: "../images/python.jpg",
-            color: "#a8aeef",
-            fontColor: "#5860bb"
-        },
-        {
-            curso: "JavaScript desde cero",
-            imagen: "../images/javascript.png",
-            color: "#f7e08c",
-            fontColor: "#d4b855"
-        },
-        {
-            curso: "CSS desde cero",
-            imagen: "../images/css.jpg",
-            color: "#6ea8ff",
-            fontColor: "#29589f"
-        },
-        {
-            curso: "HTML desde cero",
-            imagen: "../images/html.jpg",
-            color: "#f59fbd",
-            fontColor: "#d12f5e"
-        },
-        {
-            curso: "C++ desde cero",
-            imagen: "../images/c++.png",
-            color: "#90df6e",
-            fontColor: "#58b232"
-        }
-    ];
+    console.log(courses)
 
     return (
         <div className="min-h-screen bg-white py-10">
@@ -47,9 +17,11 @@ const CoursesPage = () => {
                     <CourseCard
                         key={index}
                         curso={course.curso}
+                        name={course.name}
                         imagen={course.imagen}
                         color={course.color}
                         fontColor={course.fontColor}
+                        
                     />
                 ))}
             </div>

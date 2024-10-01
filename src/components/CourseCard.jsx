@@ -1,7 +1,14 @@
 // import React from 'react';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
-const CourseCard = ({ curso, imagen, color, fontColor }) => {
+const CourseCard = ({ curso, name, imagen, color, fontColor }) => {
+    const navigate = useNavigate()
+
+    const handleNavigate = () => {
+        navigate(`/courses/${name}`);  // Redirigir basado en el nombre del curso
+      };
+
     return (
         <div
             className="rounded-lg p-6 shadow-lg flex flex-col justify-between"
@@ -9,7 +16,8 @@ const CourseCard = ({ curso, imagen, color, fontColor }) => {
             >
             <div className="flex justify-between items-center mb-4">
                 <h3 className="font-semibold">{curso}</h3>
-                <button className="bg-white/20 hover:bg-white/30 text-gray-600 px-3 py-1 rounded">
+                <button className="bg-white/20 hover:bg-white/30 text-gray-600 px-3 py-1 rounded"
+                        onClick={handleNavigate}>
                     Más
                 </button>
             </div>
@@ -27,6 +35,7 @@ const CourseCard = ({ curso, imagen, color, fontColor }) => {
     // Definición de tipos de propiedades
 CourseCard.propTypes = {
     curso: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     imagen: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired,
     fontColor: PropTypes.string.isRequired
