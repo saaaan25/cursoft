@@ -1,15 +1,10 @@
-//import para desplazamiento desde TyC
 import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
-//import React from 'react';
-
-import hombreImg from '../assets/hombre.png';  // Ajusta la ruta según tu estructura de carpetas
+import hombreImg from '../assets/hombre.png';
 import mujerImg from '../assets/mujer.png';
 
 const AboutUs = () => {
-
-    //Hola franzito que haces?
     const contactRef = useRef(null);
     const { hash } = useLocation();
 
@@ -98,41 +93,29 @@ const AboutUs = () => {
     </div>
     </div>
 
-      {/* Clients Review Section */}
+      {/* Mission & Vision Section */}
     <div className="relative mx-6 max-w-screen-xl xl:mx-auto lg:mx-24 mb-14 lg:mb-24">
-    <h2 className="text-3xl md:text-5xl font-bold mb-10 text-center text-[#1C163A]">
-    Echa un vistazo a algunas de nuestras reseñas
-    </h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div className="bg-white p-8 rounded-lg shadow-lg">
-        <div className="flex items-center mb-4">
-            <div className="w-16 h-16 bg-gray-300 rounded-full mr-4"></div>
-            <div>
-            <h4 className="text-xl font-bold">Carlos Rodríguez</h4>
-            <p className="text-gray-500">CEO en TechEdu</p>
+        <h2 className="text-3xl md:text-5xl font-bold mb-10 text-center text-[#1C163A]">
+            Nuestra Visión y Misión
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="bg-gradient-to-r from-blue-500 to-blue-700 text-white p-8 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold mb-4">Visión</h3>
+                <p className="text-lg leading-relaxed">
+                    Ser la plataforma líder en educación en programación que empodera a los estudiantes a desarrollar sus habilidades prácticas y teóricas. Aspiramos a ser reconocidos globalmente por nuestra capacidad de preparar a los estudiantes para enfrentar retos tecnológicos reales, fomentando su crecimiento profesional.
+                </p>
+            </div>
+            <div className="bg-gradient-to-r from-green-500 to-green-700 text-white p-8 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold mb-4">Misión</h3>
+                <p className="text-lg leading-relaxed">
+                    Facilitar el aprendizaje efectivo y accesible de la programación, proporcionando cursos diseñados para desarrollar no solo conocimientos, sino también habilidades prácticas aplicables en proyectos reales. Nos comprometemos a ofrecer una experiencia educativa personalizada, enfocada en el crecimiento continuo de nuestros estudiantes.
+                </p>
             </div>
         </div>
-        <p className="text-gray-600">
-        “Los cursos de programación ofrecen una enseñanza de alta calidad, proporcionando un contenido claro y relevante que es muy valioso para el desarrollo de habilidades técnicas. ¡Altamente recomendados!”
-        </p>
-        </div>
-        <div className="grid gap-6">
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-            <p className="text-gray-600">
-            “La calidad de los cursos es excepcional. Los instructores son expertos en sus campos y el contenido es muy relevante para el mercado actual.”
-            </p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-            <p className="text-gray-600">
-            “Excelente experiencia de aprendizaje. La flexibilidad y el apoyo brindado fueron clave para nuestro éxito. ¡Gracias por todo!”
-            </p>
-        </div>
-        </div>
-    </div>
     </div>
 
     {/* Contact Us Section */}
-    <div ref={contactRef} id="contact" className="bg-gradient-to-r from-purple-500 to-purple-700 text-white py-12">
+<div ref={contactRef} id="contact" className="bg-gradient-to-r from-purple-500 to-purple-700 text-white py-12">
     <div className="max-w-screen-lg mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">Contáctanos</h2>
         <p className="text-xl mb-6">¿Tienes alguna pregunta o necesitas más información? ¡Estamos aquí para ayudarte!</p>
@@ -158,6 +141,7 @@ const AboutUs = () => {
         </form>
     </div>
 </div>
+
 
 </section>
 );
