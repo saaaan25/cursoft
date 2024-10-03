@@ -1,33 +1,59 @@
-import PropTypes from 'prop-types';
-import {courses, details} from "../data/courses";
+import {courses, details, modules} from "../data/courses";
 import { useParams } from 'react-router-dom';
+import JoinButton from '../components/JoinButton';
+import { HiCode } from 'react-icons/hi';
+import AccordionTemplate from "../components/Accordion";
 
 const CourseContent = () => {
     const { name } = useParams();
     const index = courses.findIndex(element => element.name === name);
 
     return (
-        <div className="min-h-screen bg-white py-10">
-            <h1 className="text-3xl font-bold text-gray-800 text-center mb-5">
-                {details[index].curso}
-            </h1>
-            <h4 className="text-md text-gray-500 text-center mb-8">
-                Aprende cursos y desarrolla tus habilidades de programador
-            </h4>
-            <div className="ml-10 mr-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 justify-items-center">
-                ola
+        <div className="min-h-screen bg-white">
+            <div className="bg-blue-100/50 px-40 py-28 grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-6 justify-start">
+                <div>
+                    <div>
+                        <div className="mb-4">
+                            ola
+                        </div>
+                    </div>
+                    <h1 className="flex items-center text-3xl font-bold text-gray-800 gap-2 mb-5">
+                        <HiCode></HiCode> {details[index].curso}
+                    </h1>
+                    <h5 className='text-sm'>
+                        Este curso es parte de múltiples programas. <a className='text-blue-950 hover:text-blue-800 hover:cursor-pointer font-bold hover:underline'> Obtener más información </a>
+                    </h5>
+                    <div className='my-5'>
+                        <JoinButton/>
+                    </div>
+                    <h5 className='text-sm'>
+                        <a className='font-bold'> 10000 </a> ya inscritos
+                    </h5>
+                    
+                </div>
+                <div>
+                    ola
+                </div>
+            </div>
+            <div className='px-40 py-28 flex flex-col gap-6 justify-start text-sm w-[75%]'>
+                <div className="flex flex-col gap-3">
+                    <h3 className='font-bold text-sm'>¿Qué aprenderás?</h3>
+                    <p className="text-xs w-[90%]">
+                        {modules[index].text}    
+                    </p>
+                </div>
+                <div className="flex flex-col gap-3">
+                    <h3 className='font-bold text-sm'>Módulos</h3>
+                    <p className="text-xs w-[90%]">
+                        {modules[index].text}  
+                    </p>
+                </div>
+                <div>
+                    <AccordionTemplate list1={modules[index].modulos} list2={modules[index].descripcion}/>
+                </div>
             </div>
         </div>
     );
 }
-
-    // Definición de tipos de propiedades
-CourseContent.propTypes = {
-    curso: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    imagen: PropTypes.string.isRequired,
-    color: PropTypes.string.isRequired,
-    fontColor: PropTypes.string.isRequired
-};
  
 export default CourseContent;
