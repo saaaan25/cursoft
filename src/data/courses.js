@@ -78,6 +78,7 @@ export const modules = [
     {
         curso: "Python desde cero",
         text: "Este curso contiene 5 módulos. Inicie su aprendizaje de Python con este curso autodidáctico para principiantes impartido por un experto. Python es uno de los lenguajes más populares en el mundo de la programación y la ciencia de datos, y la demanda de personas con capacidad para aplicar Python nunca ha sido tan alta.",
+        learn: "Aprenda Python - el lenguaje de programación más popular y para la Ciencia de Datos y el Desarrollo de Software.",
         modulos: [
             "Conceptos básicos de Python",
             "Variables y sus tipos en Python",

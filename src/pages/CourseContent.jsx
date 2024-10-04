@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import JoinButton from '../components/JoinButton';
 import { HiCode } from 'react-icons/hi';
 import AccordionTemplate from "../components/Accordion";
+import cinna from "../assets/python-logo.png";
+import Box from "../components/Box";
 
 const CourseContent = () => {
     const { name } = useParams();
@@ -10,11 +12,11 @@ const CourseContent = () => {
 
     return (
         <div className="min-h-screen bg-white">
-            <div className="bg-blue-100/50 px-40 py-28 grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-6 justify-start">
+            <div className="bg-blue-100/50 px-40 py-28 grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-6 justify-start items-center">
                 <div>
                     <div>
                         <div className="mb-4">
-                            ola
+                            
                         </div>
                     </div>
                     <h1 className="flex items-center text-3xl font-bold text-gray-800 gap-2 mb-5">
@@ -31,15 +33,20 @@ const CourseContent = () => {
                     </h5>
                     
                 </div>
-                <div>
-                    ola
+                <div className="flex justify-end">
+                    <img
+                        className="h-[300px] opacity-35"
+                        src={cinna}
+                        alt="cinna"
+                        />
                 </div>
             </div>
+                <Box/>
             <div className='px-40 py-28 flex flex-col gap-6 justify-start text-sm w-[75%]'>
                 <div className="flex flex-col gap-3">
                     <h3 className='font-bold text-sm'>¿Qué aprenderás?</h3>
                     <p className="text-xs w-[90%]">
-                        {modules[index].text}    
+                        {modules[index].learn}    
                     </p>
                 </div>
                 <div className="flex flex-col gap-3">
