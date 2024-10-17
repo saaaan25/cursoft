@@ -9,23 +9,26 @@ import CoursesPage from './pages/Courses';
 import Services from './pages/Services';
 import TermsAndConditions from './pages/TermsAndConditions';
 import CourseContent from './pages/CourseContent';
+import { AuthProvider } from './providers/AuthContext.jsx';
 
 const App = () => {
-  return (
-    <Router>
-      <div>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/courses" element={<CoursesPage />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-          <Route path="/courses/:name" element={<CourseContent />} />
-        </Routes>
-      </div>
-    </Router>
-  );
+    return (
+      <AuthProvider>
+        <Router>
+            <div>
+                    <Header />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/aboutus" element={<AboutUs />} />
+                        <Route path="/courses" element={<CoursesPage />} />
+                        <Route path="/services" element={<Services />} />
+                        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+                        <Route path="/courses/:name" element={<CourseContent />} />
+                    </Routes>
+            </div>
+        </Router>
+      </AuthProvider>
+    );
 };
 
 export default App;

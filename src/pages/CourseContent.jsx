@@ -5,10 +5,41 @@ import { HiCode } from 'react-icons/hi';
 import AccordionTemplate from "../components/Accordion";
 import cinna from "../assets/python-logo.png";
 import Box from "../components/Box";
+import LoginModal from '../components/LoginModal';
+import { users } from '../data/users';
+import React, { useState } from 'react';
 
 const CourseContent = () => {
     const { name } = useParams();
     const index = courses.findIndex(element => element.name === name);
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+  const [user, setUser] = useState(null); // Inicialmente no hay usuario logueado
+
+  // Función para abrir el modal solo si no hay usuario logueado
+  const openModal = () => {
+    if (!user) {
+      setIsModalOpen(true);
+    }
+  };
+
+  // Simulación del cierre del modal y login exitoso
+  const closeModal = (email, password) => {
+    const loggedInUser = users.find(
+      (u) => u.email === email && u.password === password
+    );
+
+    if (loggedInUser) {
+      setUser(loggedInUser); // Si las credenciales son correctas, establece el usuario
+      setIsModalOpen(false); // Cierra el modal
+    } else {
+      alert('Credenciales incorrectas'); // Muestra un mensaje de error si las credenciales son incorrectas
+    }
+  };
+
+  const ola = () => {
+    setIsModalOpen(false);
+  }
 
     return (
         <div className="min-h-screen bg-white">
@@ -26,7 +57,8 @@ const CourseContent = () => {
                         Este curso es parte de múltiples programas. <a className='text-blue-950 hover:text-blue-800 hover:cursor-pointer font-bold hover:underline'> Obtener más información </a>
                     </h5>
                     <div className='my-5'>
-                        <JoinButton/>
+                        <JoinButton onClick={openModal}/>
+                        {isModalOpen && !user && <LoginModal onClose={closeModal} ola={ola} />}
                     </div>
                     <h5 className='text-sm'>
                         <a className='font-bold'> 10000 </a> ya inscritos
