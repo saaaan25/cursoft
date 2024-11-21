@@ -141,7 +141,7 @@ export const modules = [
         title: "Multimedia en HTML",
         resume: "Descubre cómo incluir elementos multimedia como videos, audios e imágenes en tus páginas web, mejorando la interacción y experiencia del usuario.",
         idContent: 4
-    }
+    },
 
     {
         id: 20000021,

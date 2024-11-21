@@ -21,7 +21,7 @@ export const courses = [
         bg_color: "#f7e08c",
         font_color: "#d4b855",
         image_url: "../images/javascript.png",
-        bg_url: "../logo/javascript-logo.png",
+        bg_url: "../logo/python-logo.png",
         url: "javascript-desde-cero",
         duration: "30 horas",
         level: "principante"
@@ -34,7 +34,7 @@ export const courses = [
         bg_color: "#6ea8ff",
         font_color: "#29589f",
         image_url: "../images/css.jpg",
-        bg_url: "../logo/css-logo.png",
+        bg_url: "../logo/python-logo.png",
         url: "css-desde-cero",
         duration: "20 horas",
         level: "principante"
@@ -47,7 +47,7 @@ export const courses = [
         bg_color: "#f59fbd",
         font_color: "#d12f5e",
         image_url: "../images/html.jpg",
-        bg_url: "../logo/html-logo.png",
+        bg_url: "../logo/python-logo.png",
         url: "html-desde-cero",
         duration: "15 horas",
         level: "principante"
@@ -60,7 +60,7 @@ export const courses = [
         bg_color: "#90df6e",
         font_color: "#58b232",
         image_url: "../images/c++.png",
-        bg_url: "../logo/cpp-logo.png",
+        bg_url: "../logo/python-logo.png",
         url: "cpp-desde-cero",
         duration: "40 horas",
         level: "principante"
@@ -68,6 +68,45 @@ export const courses = [
 ]
 
 
+// borrar después de completar los otros cursos
+
+export const courses1 = [
+    {
+        curso: "Python desde cero", //ya está
+        name: "python-desde-cero", //ya está
+        imagen: "../images/python.jpg", //ya está
+        color: "#a8aeef", //ya está
+        fontColor: "#5860bb" //ya está
+    },
+    {
+        curso: "JavaScript desde cero",
+        name: "javascript-desde-cero",
+        imagen: "../images/javascript.png",
+        color: "#f7e08c",
+        fontColor: "#d4b855"
+    },
+    {
+        curso: "CSS desde cero",
+        name: "css-desde-cero",
+        imagen: "../images/css.jpg",
+        color: "#6ea8ff",
+        fontColor: "#29589f"
+    },
+    {
+        curso: "HTML desde cero",
+        name: "html-desde-cero",
+        imagen: "../images/html.jpg",
+        color: "#f59fbd",
+        fontColor: "#d12f5e"
+    },
+    {
+        curso: "C++ desde cero",
+        name: "cpp-desde-cero",
+        imagen: "../images/c++.png",
+        color: "#90df6e",
+        fontColor: "#58b232"
+    }
+]
 
 
 export const modules = [
