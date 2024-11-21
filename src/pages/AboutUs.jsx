@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-
+import Tag from '../components/Tag';
 import hombreImg from '../assets/hombre.png';
 import mujerImg from '../assets/mujer.png';
 
@@ -17,15 +17,16 @@ const AboutUs = () => {
     return (
     <section id="home" className="py-24 md:py-32 lg:mb-20 2xl:pt-36">
       {/* Meet Our Team Section */}
-    <div className="relative mx-6 max-w-screen-xl xl:mx-auto lg:mx-24 ">
-    <h2 className="text-3xl md:text-5xl font-bold mb-10 text-center text-[#1C163A]">
+    <div className="relative mx-6 max-w-screen-xl xl:mx-auto lg:mx-24 flex flex-col items-center">
+    <Tag tag="Equipo"/>
+    <h2 className="subtitle">
         Conoce a nuestro equipo
     </h2>
     </div>
 
-    <div className="relative mx-6 max-w-screen-xl xl:mx-auto lg:mx-24 grid gap-10 grid-cols-1 md:grid-cols-2 mb-14 lg:mb-24">
+    <div className="relative mx-6 max-w-screen-lg xl:mx-auto lg:mx-24 grid gap-10 grid-cols-1 md:grid-cols-2 mb-14 lg:mb-24">
     {/* Profile 1 */}
-    <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+    <div className="bg-secondary/10 rounded-xl shadow-lg p-6 text-center">
         <div className="mb-4">
             <img
             className="w-24 h-24 rounded-full mx-auto object-cover"
@@ -42,7 +43,7 @@ const AboutUs = () => {
     </div>
 
     {/* Profile 2 */}
-    <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+    <div className="bg-secondary/10 rounded-xl shadow-lg p-6 text-center">
         <div className="mb-4">
             <img
             className="w-24 h-24 rounded-full mx-auto object-cover"
@@ -59,7 +60,7 @@ const AboutUs = () => {
     </div>
 
     {/* Profile 3 */}
-    <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+    <div className="bg-secondary/10 rounded-xl shadow-lg p-6 text-center">
         <div className="mb-4">
             <img
             className="w-24 h-24 rounded-full mx-auto object-cover"
@@ -76,15 +77,15 @@ const AboutUs = () => {
     </div>
 
     {/* Profile 4 */}
-    <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+    <div className="bg-secondary/10 rounded-xl  shadow-lg p-6 text-center">
         <div className="mb-4">
             <img
             className="w-24 h-24 rounded-full mx-auto object-cover"
             src={hombreImg}
-            alt="Adrián Palacios"
+            alt="Adrian Palacios"
             />
         </div>
-        <h3 className="text-xl font-bold mb-1">Adrián Palacios</h3>
+        <h3 className="text-xl font-bold mb-1">Adrian Palacios</h3>
         <div className="mt-4">
             <span className="inline-block bg-purple-600 text-white text-xs px-3 py-1 rounded-full">
             Lead developer
@@ -94,8 +95,9 @@ const AboutUs = () => {
     </div>
 
       {/* Mission & Vision Section */}
-    <div className="relative mx-6 max-w-screen-xl xl:mx-auto lg:mx-24 mb-14 lg:mb-24">
-        <h2 className="text-3xl md:text-5xl font-bold mb-10 text-center text-[#1C163A]">
+    <div className="relative mx-6 max-w-screen-xl xl:mx-auto lg:mx-24 mb-14 lg:mb-24 text-center">
+        <Tag tag="Visión y Misión"/>
+        <h2 className="subtitle text-center">
             Nuestra Visión y Misión
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -115,7 +117,7 @@ const AboutUs = () => {
     </div>
 
     {/* Contact Us Section */}
-<div ref={contactRef} id="contact" className="bg-gradient-to-r from-purple-500 to-purple-700 text-white py-12">
+<div ref={contactRef} id="contact" className="bg-primary text-white py-12">
     <div className="max-w-screen-lg mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">Contáctanos</h2>
         <p className="text-xl mb-6">¿Tienes alguna pregunta o necesitas más información? ¡Estamos aquí para ayudarte!</p>

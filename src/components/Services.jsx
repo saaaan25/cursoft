@@ -1,4 +1,5 @@
 import { Cards } from '../components/Cards';
+import Tag from "../components/Tag";
 
 // Icons
 import { FaBookMedical, FaHeart, FaPencilAlt } from "react-icons/fa";
@@ -17,19 +18,20 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <div className="block justify-center items-center min-h-screen">
-        <div className='max-w-full mx-10 mt-10'>
-            <h1 className="text-3xl font-bold text-gray-800 text-center pb-5">
+    <div className="max-w-screen-xl xl:mx-auto lg:mx-24 justify-center items-center">
+        <div className='w-full mt-10'>
+          <div className='text-center'>
+            <Tag tag="Servicios" />
+            <h2 className="text-center mx-auto subtitle">
                 Nuestros Servicios
-            </h1>
-        </div>
-        <div>
-            <h1 className="text-md text-gray-500 text-center mb-8 mx-auto">
-              Ofrecemos cursos de programación accesibles y prácticos, diseñados para impulsar tu carrera en el mundo digital. ¡Aprende y crece con nosotros!
-            </h1>
+            </h2>
+            <p className="text-lg text-gray-500 text-center mb-8 mx-auto max-w-[500px]">
+              Ofrecemos cursos de programación accesibles y prácticos, diseñados para impulsar tu carrera en el mundo digital. <span className="font-bold text-primary">¡Aprende y crece con nosotros!</span>
+            </p>
+          </div>
         </div>
 
-      <div className="grid gap-4 grid-cols-3 grid-rows-2 max-w-screen-lg w-full mx-auto">
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 grid-rows-2 w-full mx-auto">
         {servicesData.map((service, index) => (
           <Cards 
             key={index} 
