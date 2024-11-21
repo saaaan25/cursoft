@@ -7,7 +7,7 @@ const CourseCard = ({ curso, name, imagen, color, fontColor }) => {
 
     const handleNavigate = () => {
         navigate(`/courses/${name}`);  // Redirigir basado en el nombre del curso
-      };
+    };
 
     return (
         <div

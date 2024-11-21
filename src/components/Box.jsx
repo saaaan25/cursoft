@@ -12,7 +12,7 @@ const Box = ({ module, review, level, duration }) => {
             </div>
             <div className="flex flex-col items-center">
                 <p className="text-sm font-semibold">Nivel {level}</p>
-                <p className="text-xs text-gray-500">Experiencia recomendada</p>
+                <p className="text-xs text-gray-500">Experiencia no necesaria</p>
             </div>
             <div className="flex flex-col items-center">
                 <p className="text-sm font-semibold">Cronograma flexible</p>
