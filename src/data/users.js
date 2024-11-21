@@ -1,7 +1,9 @@
 export const users = [
     {
-        id: "0001",
+        id: 90000001,
         username: "sofishy",
+        name: 'Sofía',
+        lastname: 'Sarmiento',
         email: "ssarmiento088@gmail.com",
         password: "FE2024",
         type: 'estudiante'

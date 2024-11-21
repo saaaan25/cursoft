@@ -1,10 +1,30 @@
+// adecuar al formato todos los cursos (5 en total) ADRIAN
 export const courses = [
     {
-        curso: "Python desde cero",
-        name: "python-desde-cero",
-        imagen: "../images/python.jpg",
-        color: "#a8aeef",
-        fontColor: "#5860bb"
+        id: 10000001,
+        title: "Python desde cero",
+        description: "Este curso contiene 5 módulos. Inicie su aprendizaje de Python con este curso autodidáctico para principiantes impartido por un experto. Python es uno de los lenguajes más populares en el mundo de la programación y la ciencia de datos, y la demanda de personas con capacidad para aplicar Python nunca ha sido tan alta.",
+        learn: "Aprenda Python - el lenguaje de programación más popular y para la Ciencia de Datos y el Desarrollo de Software.",
+        bg_color: "#a8aeef",
+        font_color: "#5860bb",
+        image_url: "../images/python.jpg",
+        bg_url: "../logo/python-logo.png",
+        url: "python-desde-cero",
+        duration: "25 horas",
+        level: "principante"
+    }
+]
+
+
+// borrar después de completar los otros cursos
+
+export const courses1 = [
+    {
+        curso: "Python desde cero", //ya está
+        name: "python-desde-cero", //ya está
+        imagen: "../images/python.jpg", //ya está
+        color: "#a8aeef", //ya está
+        fontColor: "#5860bb" //ya está
     },
     {
         curso: "JavaScript desde cero",
@@ -36,57 +56,21 @@ export const courses = [
     }
 ]
 
-export const details = [
-    {
-        curso: "Python desde cero",
-        description: "ola",
-        imagen: "../images/python.jpg",
-        color: "#a8aeef",
-        fontColor: "#5860bb"
-    },
-    {
-        curso: "JavaScript desde cero",
-        description: "ola",
-        imagen: "../images/javascript.png",
-        color: "#f7e08c",
-        fontColor: "#d4b855"
-    },
-    {
-        curso: "CSS desde cero",
-        description: "ola",
-        imagen: "../images/css.jpg",
-        color: "#6ea8ff",
-        fontColor: "#29589f"
-    },
-    {
-        curso: "HTML desde cero",
-        description: "ola",
-        imagen: "../images/html.jpg",
-        color: "#f59fbd",
-        fontColor: "#d12f5e"
-    },
-    {
-        curso: "C++ desde cero",
-        description: "ola",
-        imagen: "../images/c++.png",
-        color: "#90df6e",
-        fontColor: "#58b232"
-    }
-]
 
 export const modules = [
     {
-        curso: "Python desde cero",
+        curso: "Python desde cero", //ya está
         text: "Este curso contiene 5 módulos. Inicie su aprendizaje de Python con este curso autodidáctico para principiantes impartido por un experto. Python es uno de los lenguajes más populares en el mundo de la programación y la ciencia de datos, y la demanda de personas con capacidad para aplicar Python nunca ha sido tan alta.",
+        //ya está
         learn: "Aprenda Python - el lenguaje de programación más popular y para la Ciencia de Datos y el Desarrollo de Software.",
-        modulos: [
+        modulos: [ //ya está
             "Conceptos básicos de Python",
             "Variables y sus tipos en Python",
             "Operadores en Python",
             "Condicionales y Bucles",
             "Listas"
         ],
-        descripcion: [
+        descripcion: [ //ya está
             "Este módulo te introduce al fascinante mundo de la programación con Python, un lenguaje ampliamente usado por su simplicidad y versatilidad. Aprenderás sobre su historia, características y la configuración de tu entorno de desarrollo.",
             "Entender las variables y sus tipos es esencial para cualquier programador. En este módulo explorarás cómo manejar diferentes tipos de datos como números, cadenas de texto, y booleanos, así como las mejores prácticas para nombrar y usar variables.",
             "Los operadores son las herramientas que permiten manipular datos. Aquí, aprenderás a realizar operaciones aritméticas, lógicas y relacionales en Python, sentando las bases para desarrollar programas más complejos.",

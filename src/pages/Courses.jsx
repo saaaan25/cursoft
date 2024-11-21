@@ -16,11 +16,11 @@ const CoursesPage = () => {
                 {courses.map((course, index) => (
                     <CourseCard
                         key={index}
-                        curso={course.curso}
-                        name={course.name}
-                        imagen={course.imagen}
-                        color={course.color}
-                        fontColor={course.fontColor}
+                        curso={course.title}
+                        name={course.url}
+                        imagen={course.image_url}
+                        color={course.bg_color}
+                        fontColor={course.font_color}
                         
                     />
                 ))}

@@ -1,45 +1,20 @@
-import {courses, details, modules} from "../data/courses";
+import { courses } from "../data/courses";
+import { modules } from "../data/modules";
 import { useParams } from 'react-router-dom';
 import JoinButton from '../components/JoinButton';
 import { HiCode } from 'react-icons/hi';
 import AccordionTemplate from "../components/Accordion";
-import cinna from "../assets/python-logo.png";
 import Box from "../components/Box";
-import LoginModal from '../components/LoginModal';
-import { users } from '../data/users';
-import React, { useState } from 'react';
 
 const CourseContent = () => {
     const { name } = useParams();
-    const index = courses.findIndex(element => element.name === name);
+    const index = courses.findIndex(element => element.url === name);
+    
+    const validation = courses[index].id
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-  const [user, setUser] = useState(null); // Inicialmente no hay usuario logueado
-
-  // Función para abrir el modal solo si no hay usuario logueado
-  const openModal = () => {
-    if (!user) {
-      setIsModalOpen(true);
-    }
-  };
-
-  // Simulación del cierre del modal y login exitoso
-  const closeModal = (email, password) => {
-    const loggedInUser = users.find(
-      (u) => u.email === email && u.password === password
-    );
-
-    if (loggedInUser) {
-      setUser(loggedInUser); // Si las credenciales son correctas, establece el usuario
-      setIsModalOpen(false); // Cierra el modal
-    } else {
-      alert('Credenciales incorrectas'); // Muestra un mensaje de error si las credenciales son incorrectas
-    }
-  };
-
-  const ola = () => {
-    setIsModalOpen(false);
-  }
+    const modules_actcourse = modules.filter(element => element.idCourse === validation).map(element => element.title);
+    
+    const descmodules_actcourse = modules.filter(element => element.idCourse === validation).map(element => element.resume);
 
     return (
         <div className="min-h-screen bg-white">
@@ -51,14 +26,13 @@ const CourseContent = () => {
                         </div>
                     </div>
                     <h1 className="flex items-center text-3xl font-bold text-gray-800 gap-2 mb-5">
-                        <HiCode></HiCode> {details[index].curso}
+                        <HiCode></HiCode> {courses[index].title}
                     </h1>
                     <h5 className='text-sm'>
                         Este curso es parte de múltiples programas. <a className='text-blue-950 hover:text-blue-800 hover:cursor-pointer font-bold hover:underline'> Obtener más información </a>
                     </h5>
                     <div className='my-5'>
-                        <JoinButton onClick={openModal}/>
-                        {isModalOpen && !user && <LoginModal onClose={closeModal} ola={ola} />}
+                        <JoinButton onClick={() => {}}/>
                     </div>
                     <h5 className='text-sm'>
                         <a className='font-bold'> 10000 </a> ya inscritos
@@ -68,27 +42,27 @@ const CourseContent = () => {
                 <div className="flex justify-end">
                     <img
                         className="h-[300px] opacity-35"
-                        src={cinna}
-                        alt="cinna"
+                        src={courses[index].bg_url}
+                        alt=""
                         />
                 </div>
             </div>
-                <Box/>
+                <Box content={courses[index]}/>
             <div className='px-40 py-28 flex flex-col gap-6 justify-start text-sm w-[75%]'>
                 <div className="flex flex-col gap-3">
                     <h3 className='font-bold text-sm'>¿Qué aprenderás?</h3>
                     <p className="text-xs w-[90%]">
-                        {modules[index].learn}    
+                        {courses[index].learn}    
                     </p>
                 </div>
                 <div className="flex flex-col gap-3">
                     <h3 className='font-bold text-sm'>Módulos</h3>
                     <p className="text-xs w-[90%]">
-                        {modules[index].text}  
+                        {courses[index].description}  
                     </p>
                 </div>
                 <div>
-                    <AccordionTemplate list1={modules[index].modulos} list2={modules[index].descripcion}/>
+                    <AccordionTemplate list1={modules_actcourse} list2={descmodules_actcourse}/>
                 </div>
             </div>
         </div>
