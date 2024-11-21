@@ -20,7 +20,7 @@ const App = () => {
                     <Route path="/services" element={<Services />} />
                     <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
                     <Route path="/courses/:url" element={<CourseContent />} />
-                    <Route path='/courses/:name/offline/:id' element={<Module />}/>
+                    <Route path='/courses/:url/offline/:id' element={<Module />}/>
                 </Routes>
             </div>
         </Router>
