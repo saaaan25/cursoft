@@ -12,49 +12,62 @@ export const courses = [
         url: "python-desde-cero",
         duration: "25 horas",
         level: "principante"
+    },
+    {
+        id: 10000002,
+        title: "JavaScript desde cero",
+        description: "Descubra las bases del lenguaje JavaScript, el motor detrás del desarrollo web interactivo y dinámico. Aprende desde conceptos básicos hasta temas esenciales como funciones y eventos.",
+        learn: "Domina JavaScript - el lenguaje base para la creación de sitios web modernos e interactivos.",
+        bg_color: "#f7e08c",
+        font_color: "#d4b855",
+        image_url: "../images/javascript.png",
+        bg_url: "../logo/javascript-logo.png",
+        url: "javascript-desde-cero",
+        duration: "30 horas",
+        level: "principante"
+    },
+    {
+        id: 10000003,
+        title: "CSS desde cero",
+        description: "Este curso ofrece un recorrido completo por los fundamentos de CSS, el lenguaje que da vida y estilo a las páginas web.",
+        learn: "Aprende CSS - el estándar para diseñar y estilizar sitios web de manera profesional.",
+        bg_color: "#6ea8ff",
+        font_color: "#29589f",
+        image_url: "../images/css.jpg",
+        bg_url: "../logo/css-logo.png",
+        url: "css-desde-cero",
+        duration: "20 horas",
+        level: "principante"
+    },
+    {
+        id: 10000004,
+        title: "HTML desde cero",
+        description: "Descubre cómo construir las bases estructurales de cualquier sitio web utilizando HTML.",
+        learn: "Domina HTML - el lenguaje esencial para estructurar contenido en la web.",
+        bg_color: "#f59fbd",
+        font_color: "#d12f5e",
+        image_url: "../images/html.jpg",
+        bg_url: "../logo/html-logo.png",
+        url: "html-desde-cero",
+        duration: "15 horas",
+        level: "principante"
+    },
+    {
+        id: 10000005,
+        title: "C++ desde cero",
+        description: "Aprende desde los fundamentos hasta conceptos avanzados de C++, uno de los lenguajes más versátiles y rápidos en el mundo de la programación.",
+        learn: "Domina C++ - el lenguaje poderoso y versátil para el desarrollo de software y videojuegos.",
+        bg_color: "#90df6e",
+        font_color: "#58b232",
+        image_url: "../images/c++.png",
+        bg_url: "../logo/cpp-logo.png",
+        url: "cpp-desde-cero",
+        duration: "40 horas",
+        level: "principante"
     }
 ]
 
 
-// borrar después de completar los otros cursos
-
-export const courses1 = [
-    {
-        curso: "Python desde cero", //ya está
-        name: "python-desde-cero", //ya está
-        imagen: "../images/python.jpg", //ya está
-        color: "#a8aeef", //ya está
-        fontColor: "#5860bb" //ya está
-    },
-    {
-        curso: "JavaScript desde cero",
-        name: "javascript-desde-cero",
-        imagen: "../images/javascript.png",
-        color: "#f7e08c",
-        fontColor: "#d4b855"
-    },
-    {
-        curso: "CSS desde cero",
-        name: "css-desde-cero",
-        imagen: "../images/css.jpg",
-        color: "#6ea8ff",
-        fontColor: "#29589f"
-    },
-    {
-        curso: "HTML desde cero",
-        name: "html-desde-cero",
-        imagen: "../images/html.jpg",
-        color: "#f59fbd",
-        fontColor: "#d12f5e"
-    },
-    {
-        curso: "C++ desde cero",
-        name: "cpp-desde-cero",
-        imagen: "../images/c++.png",
-        color: "#90df6e",
-        fontColor: "#58b232"
-    }
-]
 
 
 export const modules = [
