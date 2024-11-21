@@ -7,13 +7,13 @@ const Header = () => {
   
   
   return (
-    <nav className="bg-white p-4 font-semibold flex justify-center w-full">
-      <div className="container flex justify-between items-center text-pretty w-full">
-        <div className="flex space-x-2 font-bold text-xl items-center ml-5 mr-5">
+    <nav className="bg-transparent backdrop-blur-md p-4 font-semibold w-full">
+      <div className=" flex justify-between items-center text-pretty w-full">
+        <div className="space-x-2 font-bold text-xl items-center ml-5 mr-5 hidden md:flex">
           <div>
-            <HiCode></HiCode>
+            <HiCode className="text-3xl text-primary fill-primary"></HiCode>
           </div>
-          <div className='pb-1'>
+          <div className='uppercase'>
             Softcode
           </div>
         </div>
@@ -31,7 +31,7 @@ const Header = () => {
               to="/aboutus"
               className="hover:text-blue-800 transition-colors text-black pl-3 pr-3"
             >
-              Sobre nosotros
+              Nosotros
             </Link>
           </li>
           <li>
@@ -51,13 +51,13 @@ const Header = () => {
             </Link>
           </li>
         </ul>
-        <div className='flex space-x-6 font-semibold bg-white justify-end'>
+        <div className='flex space-x-6 font-semibold  justify-end'>
             <>
-              <button className='text-yellow-300 hover:text-black bg-white hover:border-white'
+              <button className='text-text bg-secondary/20 p-2 rounded-md  hover:border-white hover:-translate-y-1 transition-transform duration-300 ease-in-out'
                     >
                   Iniciar Sesión
               </button>
-              <button className='text-blue-800 border border-blue-800 p-2 rounded-md hover:text-black hover:border-black bg-white'>
+              <button className='primary-button'>
                   Registrarse
               </button>
             </>

@@ -7,7 +7,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa6";
 
 
-export const SubscriptionCards = ({title, mont, benefits}) => {
+export const SubscriptionCards = ({title, mont, benefits, classes}) => {
   return (
       <div className="container mx-auto border-4 p-8 border-purple-600">
           {/* TEXT */}

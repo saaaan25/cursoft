@@ -37,12 +37,14 @@ export const Cards = ({ icon: Icon, title, text, color = "blue" }) => {
   const colors = colorClasses[color] || colorClasses["blue"];
 
   return (
-    <div className={`p-4 rounded shadow-md transition-all duration-300 ${colors.cardBg}`}>
-      <div className={`p-3 rounded-lg inline-block w-auto h-auto ${colors.iconBg}`}>
-        {Icon && <Icon className={`text-3xl ${colors.iconColor}`} />}
+    <div className={`p-8 rounded-2xl bg-secondary/10 border border-primarytext-text duration-300 hover:-translate-y-1 transition-transform`}>
+      <div className="flex gap-2">
+      <div className={`p-3 rounded-lg inline-block w-auto h-auto `}>
+        {Icon && <Icon className={`text-3xl text-primary`} />}
       </div>
-      <h1 className="text-2xl text-black font-bold mb-2">{title}</h1>
-      <p className="text-justify text-black break-words max-w-full">{text}</p>
+      <h3 className="text-2xl inline text-current font-semibold border-b border-b-primary mb-2">{title}</h3>
+      </div>
+      <p className="text-justify text-current break-words max-w-full">{text}</p>
     </div>
   );
 };

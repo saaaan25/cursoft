@@ -9,6 +9,13 @@ module.exports = {
       maxWidth: {
         '2/3': '66.666667%',
       },
+      colors: {
+        'primary': '#5e15a8',
+        'secondary': '#bd96e4',
+        'accent': '#b398ad',
+        'text': '#08060a',
+        'bg': '#f7f4fa',
+      },
     },
     container:{
       center:true,

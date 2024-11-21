@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    @apply bg-bg
+}
+
+.primary-button {
+    @apply text-bg bg-primary transition-all duration-300 ease-in-out shadow-2xl shadow-transparent px-5 py-3 rounded-md hover:-translate-y-1 hover:shadow-primary/40;
+}
+
+.subtitle{
+    @apply text-3xl md:text-4xl font-bold mb-10 text-[#1C163A];
+}
