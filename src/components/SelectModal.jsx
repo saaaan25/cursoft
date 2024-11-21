@@ -1,32 +1,35 @@
 import { useNavigate } from 'react-router-dom';
 
-const SelectModal = ({ onClose, url, id }) => {
+const SelectModal = ({ onClose, id }) => {
     const navigate = useNavigate()
 
     const gotoOffline = () => {
-        navigate(`${url}/offline/${id}`);
+        navigate(`offline/${id}`);
     };
 
     const gotoOnline = () => {
-        navigate(`${url}/online/${id}`);
+        navigate(`online/${id}`);
     };
 
     const gotoDocumentation = () => {
-        navigate(`${url}/documentation/${id}`);
+        navigate(`documentation/${id}`);
     };
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white rounded-lg shadow-lg w-96 p-6">
+            <div className="bg-white rounded-lg shadow-lg w-150 p-6">
                 <h2 className="text-xl font-bold text-center">Selecciona la modalidad del curso</h2>
-                <div>
-                    <button onClick={gotoOffline}>
+                <div className='flex gap-x-3 mt-6'>
+                    <button onClick={gotoOffline} className="flex flex-col pt-2 pb-3 px-9 bg-blue-700 text-white items-center justify-center 
+                rounded-md hover:bg-blue-800">
                         Offline
                     </button>
-                    <button onClick={gotoOnline}>
+                    <button onClick={gotoOnline} className="flex flex-col pt-2 pb-3 px-9 bg-blue-700 text-white items-center justify-center 
+                rounded-md hover:bg-blue-800">
                         Online
                     </button>
-                    <button onClick={gotoDocumentation}>
+                    <button onClick={gotoDocumentation} className="flex flex-col pt-2 pb-3 px-9 bg-blue-700 text-white items-center justify-center 
+                rounded-md hover:bg-blue-800">
                         Documentation
                     </button>
                 </div>

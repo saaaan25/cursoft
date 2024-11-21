@@ -11,8 +11,8 @@ import SelectModal from "../components/SelectModal";
 import { useState } from "react";
 
 const CourseContent = () => {
-    const { url } = useParams();
-    const index = courses.findIndex(element => element.url === url);
+    const { name } = useParams();
+    const index = courses.findIndex(element => element.url === name);
     
     const validation = courses[index].id
     const modules_actcourse = modules.filter(element => element.idCourse === validation).map(element => element.title);
@@ -77,7 +77,7 @@ const CourseContent = () => {
                     <AccordionTemplate list1={modules_actcourse} list2={descmodules_actcourse}/>
                 </div>
             </div>
-            {isOpen && <SelectModal onClose={closeModal} url={url} id={idModule}/>}
+            {isOpen && <SelectModal onClose={closeModal} id={idModule}/>}
         </div>
     );
 }

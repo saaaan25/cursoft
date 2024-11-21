@@ -6,7 +6,7 @@ import CoursesPage from './pages/Courses';
 import Services from './pages/Services';
 import TermsAndConditions from './pages/TermsAndConditions';
 import CourseContent from './pages/CourseContent';
-import Module from './pages/Module';
+import OfflineModule from './pages/OfflineModule';
 
 const App = () => {
     return (
@@ -19,8 +19,8 @@ const App = () => {
                     <Route path="/courses" element={<CoursesPage />} />
                     <Route path="/services" element={<Services />} />
                     <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-                    <Route path="/courses/:url" element={<CourseContent />} />
-                    <Route path='/courses/:url/offline/:id' element={<Module />}/>
+                    <Route path="/courses/:name" element={<CourseContent />} />
+                    <Route path='/courses/:name/offline/:id' element={<OfflineModule />}/>
                 </Routes>
             </div>
         </Router>
